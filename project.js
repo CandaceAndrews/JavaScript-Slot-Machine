@@ -1,4 +1,4 @@
-// 1. Despot some money
+// 1. Deposit some money
 // 2. Determine number of lines to bet on
 // 3. Collect a bet amount
 // 4. Spin the slot machine
@@ -21,5 +21,18 @@ const deposit = () => {
     }
 };
 
+const getNumberOfLines = () => {
+    while (true) {
+        const lines = prompt("Enter the number of lines to bet on. (1-3): ");
+        const numberOfLines = parseFloat(lines);
+
+        if (isNaN(numberOfLines) || numberOfLines <= 0 || numberOfLines > 3) {
+            console.log("Invalid number of lines, try again.");
+        } else {
+            return numberOfLines;
+        }
+    }
+}
+
 const depositAmount = deposit();
-console.log(depositAmount);
+const numberOfLines = getNumberOfLines();
