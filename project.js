@@ -8,7 +8,7 @@
 
 const prompt = require("prompt-sync")();
 
-// get the starting deposit
+// get the deposit
 const deposit = () => {
     while (true) {
         const depositAmount = prompt("Enter a deposit amount: ");
@@ -34,7 +34,7 @@ const getNumberOfLines = () => {
             return numberOfLines;
         }
     }
-}
+};
 
 // get the amount user want to bet
 const getBet = (balance, lines) => {
@@ -48,8 +48,8 @@ const getBet = (balance, lines) => {
         return numberBet;
       }
     }
-  };
+};
 
 let balance = deposit();
 const numberOfLines = getNumberOfLines();
-const bet = getBet(balance);
+const bet = getBet(balance, numberOfLines);
