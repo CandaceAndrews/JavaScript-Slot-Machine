@@ -53,7 +53,7 @@ const getNumberOfLines = () => {
     }
 };
 
-// get the amount user want to bet
+// get the amount user wants to bet
 const getBet = (balance, lines) => {
     while (true) {
       const bet = prompt("Enter the bet per line: ");
@@ -93,7 +93,7 @@ const spin = () => {
 const transpose = (reels) => {
     const rows = [];
 
-    for (let i =0; i < ROWS; i++) {
+    for (let i = 0; i < ROWS; i++) {
         rows.push([]);
         for (let j = 0; j < COLS; j++) {
             rows[i].push(reels[j][i]);
